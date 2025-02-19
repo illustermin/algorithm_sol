@@ -1,0 +1,25 @@
+const fs = require("fs");
+const input = fs.readFileSync("input.txt").toString().trim().split("\n");
+
+const n = parseInt(input[0]);  //N마리의 소
+const cow = input.slice(1).map(Number);   //나머지 메인 배열 담기
+let stack = []; 
+let count=0;
+
+stack.push(cow[0]);
+
+for(let i=1; i<n; i++) {
+  // 스택에 있는거랑 비교 => pop또는 push 하기
+  while (stack.length > 0 && stack[stack.length - 1] <= cow[i]) {  //배열의 마지막 요소와 비교
+    stack.pop(); // 스택에 있는수보다 크거나 같으면 pop
+}
+  count+=stack.length;
+  stack.push(cow[i]);  //스택에 넣기
+  
+};
+console.log(count);
+
+
+
+
+
