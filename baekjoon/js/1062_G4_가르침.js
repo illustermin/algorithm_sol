@@ -1,5 +1,6 @@
 const fs = require('fs');
 const input = fs.readFileSync('lecture.txt').toString().trim().split('\n');
+
 const [n, k] = input[0].split(' ').map(Number);
 let strings = input.slice(1);
 let alphabet = {};
