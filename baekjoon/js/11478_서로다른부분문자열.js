@@ -1,16 +1,14 @@
 const fs = require('fs');
 const input = fs.readFileSync('personal.bj.txt').toString().trim().split("\n");
 
-const a = new Set(input[1].split(" ").map(Number));
-const b = new Set(input[2].split(" ").map(Number));
+const s = input[0];
+let str = new Set();
 
-let count = 0;
-
-a.forEach(num =>{
-    if(b.has(num)){
-       count++;
+for (let i = 0; i < s.length; i++) {
+    for (let j = i; j < s.length; j++) {
+       str.add(s.substring(i,j+1))
     }
-})
+}
 
 
-console.log((a.size + b.size) - (2* count));
+console.log(str.size);
