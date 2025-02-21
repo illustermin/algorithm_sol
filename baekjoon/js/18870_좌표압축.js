@@ -7,9 +7,10 @@ let count = new Array(n).fill(0);
 
 for (let i = 0; i < n; i++) {
   for (let j = 0; j < n; j++) {
-     if(arr[i] > arr[j] && i!==j) {
+     if(i!==j && arr[i] > arr[j]) {
         count[i]++;
     }
+
 }
 }
 console.log(count);
