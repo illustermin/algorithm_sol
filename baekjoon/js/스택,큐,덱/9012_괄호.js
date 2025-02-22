@@ -6,7 +6,7 @@ const arr = input.slice(1);
 
 
 for (let i = 0; i < n; i++) {
-    const line = arr[i].split("");
+    const line = arr[i];
     let stack = [];
     let isVPS = true;
 
@@ -14,12 +14,10 @@ for (let i = 0; i < n; i++) {
        if(line[j]=== "("){
         stack.push("(");
        }else{
-        if(stack.length>0){
+        if(stack[stack.length-1] ==="("){
             stack.pop();
-            break;
         }else{
-            isVPS = false;
-            break;
+            stack.push(")")
         }
        }
     }
