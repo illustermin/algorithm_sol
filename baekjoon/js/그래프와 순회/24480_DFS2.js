@@ -9,7 +9,7 @@ for (let i = 1; i <= M; i++) {
    graph[v].push(u);
 }
 for (let i = 1; i <= N; i++) {
-   graph[i].sort((a,b) => a-b);
+   graph[i].sort((a,b) => b-a);
 }
 
 //방문처리
