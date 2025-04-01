@@ -8,9 +8,9 @@ speak = [
     "Never gonna say goodbye",
     "Never gonna tell a lie and hurt you",
     "Never gonna stop"
-]
+] 
 
-check = False
+check = False 
 
 for line in range(n):
   data = input()
