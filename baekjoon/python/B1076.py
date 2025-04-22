@@ -15,6 +15,6 @@ color1 = input().strip()
 color2 = input().strip()
 color3 = input().strip()
 
-num = int(str(colors[color1][0]) + str(colors[color2][0])  )
+num = colors[color1][0] * 10 + colors[color2][0]
 result = num * colors[color3][1]
 print(result)
