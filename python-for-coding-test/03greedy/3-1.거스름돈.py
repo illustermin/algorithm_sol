@@ -11,6 +11,6 @@ count=0
 coint_types = [500, 100, 50, 10]
 
 for coin in coint_types:
-    count+=n
+    count+=n //coin
     n%=coin
 print(count)
