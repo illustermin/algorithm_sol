@@ -1,11 +1,14 @@
-n, k = map(int, input().split())
-result = 0
+n,k  = map(int, input().split())
 
-while n >= k:
-    result += n % k 
-    n -= n % k      
-    result += 1
-    n //= k         
-
-result += (n - 1)
-print(result)
+count=0
+while n>1:
+    if n%k==0:
+        n//=k
+        count+=1
+    else:
+        if n<k:
+            count += n-1
+            break
+        count += n%k
+        n -= n%k
+print(count)
